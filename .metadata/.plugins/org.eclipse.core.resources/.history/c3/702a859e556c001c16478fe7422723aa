@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		
+		const hours = new Date().getHours();
+		let result = document.getElementById("result").src;
+		result = img/sun.png;
+		
+		if(hours > 17){
+			result = img/moon.png;	
+		}
+	}
+</script> 
+</head>
+<body>
+	<img id="result">
+</body>
+</html>

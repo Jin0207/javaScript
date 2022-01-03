@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chgKor() {
+		const num = Number(document.getElementById("num").value);
+		let result = "";
+		if(num.length <= 2){
+			for(let i = 0; i < num.length; i++){
+				if(i == 2){
+					result += "십";
+				}
+				switch (key) {
+				case 1: "일";break;
+				case 2: "이";break;
+				case 3: "삼";break;
+				case 4: "사";break;
+				case 5: "오";break;
+				case 6: "육";break;
+				case 7: "칠";break;
+				case 8: "팔";break;
+				case 9: "구";break;
+				default: result="1 ~ 99 사이의 수를 입력하세요";break;
+				}
+			}	
+		}else{
+			result = "1 ~ 99 사이의 수를 입력하세요";
+		}
+	}
+</script>
+</head>
+<body>
+	숫자를 입력하세요<small>(0 ~ 99사이의 수)</small>: <input type="number" id="num">
+	<button onclick="chgKor()">변환</button>
+</body>
+</html>

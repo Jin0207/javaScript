@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*	
+		a = 20 > 10;
+		b = "김" > "홍";
+	*/
+	/*
+		a = true;
+		b = !a;
+	*/
+	/*
+		alert(a);
+		alert(b);
+	*/
+	a = 20;
+	result = a >= 10 && a <= 20;
+	alert(result);
+	</script>
+</body>
+</html>

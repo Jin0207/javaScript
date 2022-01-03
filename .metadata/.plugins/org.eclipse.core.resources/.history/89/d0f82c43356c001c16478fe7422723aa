@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="result"></div>
+
+	<script type="text/javascript">
+		setInterval( function() {
+			const now = new Date();
+			const year = now.getFullYear();
+			const month = now.getMonth() + 1;
+			const date = now.getDate();
+			
+			const hours = now.getHours();
+			const minutes = now.getMinutes();
+			const seconds = now.getSeconds();
+
+			const result = `${year}년 ${month}월 ${date}일 ${hours}시 ${minutes}분 ${seconds}초	`;
+			
+		}, 1000);
+	
+		
+	</script>
+</body>
+</html>

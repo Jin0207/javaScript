@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function grade() {
+		const score = document.getElementById("score").value;
+		let grade = "가"
+		
+		if(score > 90){
+			grade = "수"	
+		}else if (score > 80) {
+			grade = "우"
+		}else if (score > 70) {
+			grade = "미"
+		}else if (score > 60) {
+			grade = "양"
+		}
+		
+		document.getElementById("grade").innerHTML = `${grade}`;
+	}
+</script>
+</head>
+<body>
+	점수: <input type="number" id="score">
+	<button onclick="grade()">채점</button>
+	<hr>
+	등급: <span id="grade"></span>
+</body>
+</html>

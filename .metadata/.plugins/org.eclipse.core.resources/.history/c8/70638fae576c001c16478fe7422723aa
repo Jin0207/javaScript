@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		const num1 = documnet.getElementById("num1");
+		const num2 = documnet.getElementById("num2");
+		const num3 = documnet.getElementById("num3");
+		let max = num1;
+		
+		if(num2 > max){
+			max = num2;
+			if(num3 > num2){
+				max = num3;
+			}
+		}
+		if(num3 > max){
+			max = num3;
+			if(num2 > num3){
+				max = num2;
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	수1: <input type="number" id="num1"><br>	
+	수2: <input type="number" id="num2"><br>	
+	수3: <input type="number" id="num3">
+	<hr>
+	3개의 수 중 가장 큰수 : <span id="result"></span>	
+</body>
+</html>

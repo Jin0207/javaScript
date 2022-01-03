@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	const radius = document.getElementById("radius").value;
+</script>
+</head>
+<body>
+	반지름: <input type="number" id="radius">
+</body>
+</html>

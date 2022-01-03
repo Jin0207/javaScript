@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function chngImage() {
+		arr=["ball1", "ball2", "ball3"];
+		img = document.getElementById("img");
+		
+		for(let i = 0; i < arr.length; i++){
+			img.src = `img/${arr[i]}.jpg`;
+		}
+	}
+	setIntervalArr("chngImage()", 1000)
+</script>
+</head>
+<body>
+	<img src="" id="img">
+</body>
+</html>

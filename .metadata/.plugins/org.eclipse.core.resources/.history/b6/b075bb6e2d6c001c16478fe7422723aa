@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function findMax() {
+		const num1 = document.getElementById("num1").value;
+		const num2 = document.getElementById("num2").value;
+		let result = "";
+		
+		if(num1 > num2){
+			result = num1;
+		}else {
+			result = num2;
+		}
+		
+		alert(result);
+	}
+</script>
+</head>
+<body>
+	수1: <input type="number" id="num1">
+	수2: <input type="number" id="num2">
+	<button type="button" onclick="findMax()">더 큰수 찾기</button>
+	<hr>
+	결과 : <span id="result"></span>
+</body> 
+</html>

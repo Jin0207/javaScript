@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	수1: <input type="number" id="num1">
+	수2: <input type="number" id="num2">
+	<button type="button" onclick="findMax()">더 큰수 찾기</button>
+	
+</body>
+</html>

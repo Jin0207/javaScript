@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		img = document.getElementById("img").src;
+	}
+</script>
+</head>
+<body>
+	<img src="" id="img">
+</body>
+</html>

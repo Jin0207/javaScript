@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		const current = new Date();
+		const year = current.getFullYear();
+		const month = current.getMonth();
+		const date = current.getDate();
+		
+		const hours = date.getHours();
+		const minutes = date.getMinutes();
+		const secont = date.getSeconds();
+
+		alert(year+'년'+month+'월'+date+'일'+hours+'시' + minutes + '분');
+	</script>
+</body>
+</html>

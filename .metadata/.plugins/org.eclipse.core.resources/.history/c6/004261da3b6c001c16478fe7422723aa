@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var a = "100";
+		var a1 = Number(a);
+		var a2 = eval(a);
+		console.log( typeof(a) );
+		console.log( typeof(a1) );
+		console.log("-------------------------------");
+		
+		var b = 20;
+		var b1 = String(b);
+		var b2 = b + "";
+		
+		console.log( typeof(b) );
+		console.log( typeof(b1) );
+		console.log( typeof(b2) );
+	</script>
+</body>
+</html>

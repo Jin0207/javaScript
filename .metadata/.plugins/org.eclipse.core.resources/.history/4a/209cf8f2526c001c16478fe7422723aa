@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		
+		if(new Date().getHours <= 12){
+			document.getElementById("result").innerHTML = "오전입니다.";	
+		}else{
+			document.getElementById("result").innerHTML = "오후입니다.";	
+		}
+		
+	}
+</script>
+</head>
+<body>
+	결과: <span id="result"></span>
+</body>
+</html>
