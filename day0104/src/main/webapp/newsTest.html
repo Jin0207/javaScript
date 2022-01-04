@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let news = "현 벌금제 처벌효과 극과 극, '하루 수입' 연동해 벌금 부과… 소득 파악 등 논란될 듯";
+        
+        window.onload = ()=>{
+            let n = 1;
+            setInterval(()=>{
+                let data = news.substr(0,n++);
+                document.getElementById("result").innerHTML = data;
+
+                if(n >= new.length ){
+                    n = 1;
+                }
+            },200);
+        }
+    </script>
+</head>
+<body>
+    <div id="result"></div>   
+</body>
+</html>

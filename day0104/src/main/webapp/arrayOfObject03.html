@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	let members = [
+			{name:"이순신",age:20},
+			{name:"유관순",age:21},
+			{name:"김유신",age:20},
+			{name:"홍길동",age:23},
+			{name:"강감찬",age:22}			
+			]
+	
+	let pro = ()=>{
+		let data = "";
+		data += "<table>";
+		data += "<tr><td>이름</td><td>나이</td></tr>";
+		for(let i of members){
+			data += `<tr><td>${i.name}</td><td>${i.age}</td></tr>`;
+		}
+		
+		data += "</table>";
+		
+		document.getElementById("result").innerHTML = data;
+	}
+	
+</script>
+</head>
+<body>
+	<h2>고객목록</h2>
+	<div id="result"></div>
+	<button onclick="pro()">출력</button>
+</body>
+</html>
+
+

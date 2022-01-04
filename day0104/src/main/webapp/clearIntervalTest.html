@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let my;
+
+        let start = () => {
+            my = setInterval( ()=>{
+                let today = new Date();
+                document.getElementById("result").innerHTML = today;
+            } , 1000);
+        }
+
+        let stop = () => {
+            clearInterval(my);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="start()">시작</button>
+    <button onclick="stop()">중지</button>
+    <hr>
+    <div id="result"></div>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chgKor() {
+		let num = Number(document.getElementById("num").value);
+		
+		//정수 / 정수 = 실수 
+		tenDigit = parseInt( num / 10 + "" );
+		oneDigit = num % 10;
+		
+		arrTen = ["","십","이십","삼십","사십","오십","육십","칠십","팔십","구십"];
+		arrOen = ["","일","이","삼","사","오","육","칠","팔","구"];
+		
+		let kor = "";
+		if(num == 0){
+			kor = "영";
+		}else{
+			kor = arrTen[tenDigit] + arrOen[oneDigit];	
+		}
+		
+		document.getElementById("result").innerHTML = kor;
+	}
+</script>
+</head>
+<body>
+	숫자를 입력하세요<small>(0 ~ 99사이의 수)</small>: <input type="number" id="num">
+	<button onclick="chgKor()">변환</button>
+	<hr>
+	결과: <span id="result"></span>
+</body>
+</html>

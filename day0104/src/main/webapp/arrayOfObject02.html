@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	let members = [
+			{name:"이순신",age:20},
+			{name:"유관순",age:21},
+			{name:"김유신",age:20},
+			{name:"홍길동",age:23},
+			{name:"강감찬",age:22}			
+			]
+	
+	for(let i in members){
+		console.log(members[i].name + "," + members[i].age);
+	}
+	console.log("---------------------------")
+	for(let i of members){
+		console.log(i.name + ","+i.age);
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+

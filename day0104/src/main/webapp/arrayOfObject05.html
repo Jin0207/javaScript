@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let members =[
+            {name: "이순신", age: 20},
+            {name: "유관순", age: 21},
+            {name: "김유신", age: 20},
+            {name: "홍길동", age: 23},
+            {name: "강감찬", age: 22},
+        ];
+
+        let printMember = (m) => {
+            console.log(`${m.name}의 나이는 ${m.age} 살입니다.`);
+        }
+
+        for(let i of members){
+            printMember(i);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

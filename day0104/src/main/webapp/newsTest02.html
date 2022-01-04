@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let news = ["현 벌금제 처벌효과 극과 극, '하루 수입' 연동해 벌금 부과… 소득 파악 등 논란될 듯",
+                    "저축은행 직원들, 지난해 1인당 5억씩 벌었다…시중은행 2.5배",
+                    "\"사내 부부, 2억 넘게 받았다\"…연말 보너스 4000% 쏜 회사의 정체",
+                    "올해도 불꽃 M&A…조단위 대어 매물 수두룩",
+                    "오미크론 확진·입원 디커플링 뚜렷…팬데믹 종식 신호 기대감"
+                    ];
+        
+        window.onload = ()=>{
+            let n = 1;
+            let i = 0;
+
+            setInterval(()=>{
+                let data = news[i].substr(0,n++);
+                document.getElementById("result").innerHTML = data;
+
+                if(n > news[i].length ){
+                    n=1;
+                    i++;
+                }
+                
+                if(i >= news.length ){
+                    i=0;
+                    n=1;
+                }
+            },500);
+        }
+    </script>
+</head>
+<body>
+    <div id="result"></div>   
+</body>
+</html>

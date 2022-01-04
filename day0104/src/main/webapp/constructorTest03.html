@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Member(name, age){
+            this.name = name;
+            this.age = age;
+        }
+
+        //화살표 함수로 표현시에는 동작하지 않음
+        Member.prototype.print = function(){
+            console.log(`${this.name}의 나이는 ${this.age}살입니다.`);
+        }
+        /*
+        let members = [
+            new Member("홍길동", 20),
+            new Member("이순신", 22),
+            new Member("유관순", 23),
+            new Member("김유신", 25),
+            new Member("강감찬", 20),
+        ];
+        */
+        let members = [];
+        members.push( new Member("홍길동", 20));
+        members.push( new Member("이순신", 22));
+        members.push( new Member("고길동", 24));
+        members.push( new Member("유관순", 25));
+        members.push( new Member("김찬", 26));
+        
+        for(let i of members){
+            i.print();
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

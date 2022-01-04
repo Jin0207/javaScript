@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function Goods(name, price, qty){
+		this.name = name;
+		this.price = price;
+		this.qty = qty;
+	}
+	Goods.prototype.print = function(){
+		console.log(`상품명 : ${this.name}, 가격 : ${this.price}, 수량:${this.qty}`);
+	}
+	
+	let arr = [];
+	
+	let addData = ()=>{
+		let name = document.getElementById("name").value;
+		let price = document.getElementById("price").value;
+		let qty = document.getElementById("qty").value;
+		
+		arr.push(new Goods(name,price,qty));
+		
+		printData();
+	}
+	
+	let printData = ()=>{
+		let total = 0;
+		let salePrice = 0;
+		let data = "";
+		data += "<table width='80%' border='1'>";
+		data += "<tr><td>상품명</td><td>가격</td><td>수량</td><td>판매금액</td></tr>";
+		for(let i of arr){
+			salePrice = i.price * i.qty;
+			data += `<tr><td>${i.name}</td><td>${i.price}</td><td>${i.qty}</td><td>${salePrice}</td></tr>`;
+			total += salePrice;
+		}
+		data += "</table>";
+		data += `<p>총판매금액 : ${total}</p>`;
+		document.getElementById("result").innerHTML = data;
+	}
+</script>
+</head>
+<body>
+	상품명 : <input type="text" id="name"><br>
+	가격 : <input type="text" id="price"><br>
+	수량 : <input type="text" id="qty"><br>
+	<button onclick="addData()">추가</button>
+	<hr>
+	<div id="result"></div>
+</body>
+</html>
+
+
+
+
