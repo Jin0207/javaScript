@@ -9,7 +9,13 @@
 		let result = "";
 		
 		if(num.length <= 2){
+			
 			for(let i=0; i < num.length; i++){
+				
+				if(i == 1){
+					result += "십";
+				}
+				
 				switch (num[i]) {
 				case "1": result += "일";break;
 				case "2": result += "이";break;
@@ -26,18 +32,7 @@
 		}else{
 			result = "1 ~ 99 사이의 수를 입력하세요";
 		}
-		
-		if(result.length == 2){
-			const tmp = result;
-			
-			for(let i=0; i<tmp.length; i++){
-				result = tmp[i];
-				if(i==1){
-					result += "십" + tmp[i];
-				}
-			}
-		}
-		
+
 		document.getElementById("result").innerHTML = result;
 	}
 </script>
