@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let data = [
+			{name: "홍길동", age:20},
+			{name: "이순신", age:40}
+		];
+		
+		//배열도 객체로 표현
+		console.log(typeof data);
+		
+		//객체를 문자열로 변환
+		let a = JSON.stringify(data);
+		console.log(a);
+		console.log(typeof a);
+		
+		// 문자열을 객체로 변환
+		let arr = JSON.parse(a);
+		console.log(arr);
+		console.log(typeof arr);
+			
+	</script>
+</body>
+</html>

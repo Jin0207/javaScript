@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		String.prototype.contain = function(data) {
+			return this.indexOf(data) >= 0;
+		}
+		
+		let msg = "hello java";
+		console.log(msg.contain("java"));
+		console.log(msg.contain("oracle"));
+	</script>
+</body>
+</html>

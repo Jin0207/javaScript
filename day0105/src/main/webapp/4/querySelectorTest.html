@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		//h1태그가 여러개 있더라도 맨 첫번째 것만 반환
+		const arr = document.querySelector("h1");
+		console.log(arr);
+		arr.style.backgroundColor = "pink";
+		
+		//h1 태그를 모두 반환(배열로)
+		const data = document.getElementsByTagName("h2");
+		console.log(data);
+		for(i=0; i <data.length; i++){
+			data[i].style.color = "blue";
+		}
+		//HTMLCollection(3) --> forEach함수 사ㅇ용불가
+		//data.forEach(function(item, i){
+		//	item.style.color = "blue"
+		//})
+	}
+	
+</script>
+</head>
+<body>
+	<h1>홍길동</h1>
+	<h1>뿜뿜</h1>
+	<h2>봄</h2>
+	<h2>뿜</h2>
+</body>
+</html>

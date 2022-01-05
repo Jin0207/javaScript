@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//http://192.168.219.101:8080/mobileTest/index.html
+	window.onload = function() {
+		let user = navigator.userAgentl
+		user = user.toLowerCase();
+		/*
+		if(user.indexOf("mobile") != -1){
+			location.href = "http://192.168.219.101:8080/mobileTest/index.html";
+		}
+		*/
+		if(user.includes("mobile")){
+			location.href = "http://192.168.219.101:8080/mobileTest/index.html";
+		}
+	}
+</script>
+</head>
+<body bgcolor="yellow">
+	<h2>데스크 탑 서비스</h2>
+	<hr>
+</body>
+</html>

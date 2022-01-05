@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+	/*
+		let data = [10,20,30,40,50];
+		//item:배열의요소 index:인덱스
+		data.forEach(function(item,index){
+			console.log(item +"," + index);
+		});
+	*/
+		data = [
+			{name: "이순신", age: 20},
+			{name: "유관순", age: 21},
+			{name: "김유신", age: 20},
+			{name: "홍길동", age: 30},
+			{name: "강감찬", age: 22}
+		];
+		let total = 0;
+		data.forEach(function(item,index) {
+			total += item.age;
+		});
+		
+		let avg = total/data.length;
+		
+		console.log(avg);
+	</script>
+</body>
+</html>

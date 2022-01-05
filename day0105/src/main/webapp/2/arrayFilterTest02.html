@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let data = [
+			{name: "사과", qty: 15},
+			{name: "포도", qty: 30},
+			{name: "수박", qty: 12},
+			{name: "딸기", qty: 20},
+			{name: "체리", qty: 25},
+			{name: "오렌지", qty: 50}
+		];
+		
+		let arr = data.filter(function(item,index) {
+			return item.qty >= 20;
+		})
+		
+		console.log(arr);
+	</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//let arr = new Array(10);
+		try{
+			let arr = new Array(-10);
+			console.log(`배열의 크기는 ${arr.length}입니다.`);
+		}catch (e) {
+			console.log(`예외발생: ${e.name}`);
+		}finally{
+			console.log("작업종료");
+		}
+	</script>
+</body>
+</html>
