@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#btnChildren").click(function() {
+			$("li > span").css("color","orange");
+		});
+		
+		$("#btnDecendants").click(function() {
+			$("li span").css("color","red");
+		});
+		
+		$("#btnReset").click(function() {
+			$("*").css("color","black");
+		});
+	})
+
+</script>
+</head>
+<body>
+	<ul>
+		<li>
+			홍길동
+			<br>
+			<span>20살</span>
+			<br>
+			<div>
+				<span>서울시 마포구 서교동</span>
+			</div>
+		</li>
+		<li>
+			유관순
+			<br>
+			<span>40살</span>
+			<br>
+			<div>
+				<span>서울시 마포구 신수동</span>
+			</div>
+		</li>
+		<li>
+			이순신
+			<br>
+			<span>30살</span>
+			<br>
+			<div>
+				<span>서울시 마포구 서교동</span>
+			</div>
+		</li>
+	</ul>
+	
+	<button id="btnChildren"> li의 아들 span 선택</button>
+	<button id="btnDecendants"> li의 후손 span 선택</button>
+	<button id="btnReset"> 초기화</button>
+</body>
+</html>

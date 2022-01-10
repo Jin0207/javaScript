@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#btnName").click(function() {
+			$(".name").css("color","orange");
+		});
+		
+		$("#btnManager").click(function() {
+			$(".manager").css("background","green");
+		});
+	});	
+</script>
+</head>
+<body>
+	<p class="name">홍길동</p>
+	<p>20</p>
+	<p>서울시 마포구 서교동</p>
+	<hr>
+	
+	<p class="name manager">이순신</p>
+	<p class="manager">30</p>
+	<p class="manager">서울시 마포구 동교동</p>
+	<hr>
+	
+	<p class="name">유관순</p>
+	<p>40</p>
+	<p>서울시 마포구 창천동</p>
+	<hr>
+	
+	<button id="btnName">이름 선택</button>
+	<button id="btnManager">관리자 선택(이름,나이,거주지)</button>
+</body>
+</html>

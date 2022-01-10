@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		let arr_team = ["일찍끝내조", "B4", "취업을자바조"];
+		
+		let arr_member = {
+				"일찍끝내조": ["김수연", "박지예", "유하림", "임하연"],
+				"B4": ["최현호", "김지현", "윤서우", "정자영"],
+				"취업을자바조": ["윤태인","김시아", "노유나","박성미", "임상진"]
+		}
+		
+		// 배열만큼 반복 실행하여 동적으로 option 태그를 생성하여 추가
+		$.each(arr_team, function(index, item){
+				let option = $("<option></option>").html( item );
+				$("#team_list").append(option);
+		});
+		
+		$("#team_list").change(function(){
+			let value = $("#team_list > option:selected").val();
+			$("#member_list").empty();
+			
+			console.log(value);
+			//속성명을 변수에 담아놓고 접근하려면
+			//. 연산자로는 안된다
+			// [] 연산자로 접근해야한다.
+			
+			let arr = arr_member[value];
+			//let arr = arr_member.B4;
+			console.log(arr);
+			
+			$.each(arr, function(index, item) {
+				$("#member_list").append( $("<option></option>").html(item));
+			});
+			
+			$("#btnOK").click(function(){
+				data1 = $("#team_list > option:selected").val();
+				data2 = $("#member_list > option:selected").val();
+				data = data1 + "" + data2;
+				$("#result").html(data);
+			});
+		});
+		
+	});	
+
+</script>
+</head>
+<body>
+	<select id="team_list">
+	</select>
+	<select id="member_list">
+	</select>
+	<button id="btnOK">확인</button>
+	
+	선택한 사람: <span id="result"></span>
+</body>
+</html>

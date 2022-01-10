@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#team_list").change(function() {
+			let value = $("#team_list option:selected").val();
+			$("span").html(value);
+		});
+	});	
+
+</script>
+</head>
+<body>
+	<select id="team_list">
+		<option>일찍끝내조</option>
+		<option>B4</option>
+		<option>취업을자바조</option>
+	</select>
+	<span></span>
+</body>
+</html>

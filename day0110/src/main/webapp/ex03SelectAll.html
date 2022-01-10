@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{
+		color: red;
+	}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#btnBlue").click( function(){
+			$("*").css("color","blue");
+		});
+	});
+</script>
+</head>
+<body>
+	<h2>홍길동</h2>
+	<h3>서울시 마포구 서교동</h3>
+	<ul>
+		<li>사과</li>
+		<li>포도</li>
+		<li>수박</li>
+		<li>오렌지</li>
+	</ul>
+	<div>
+		<p>010-1234-5678</p>
+	</div>
+	<button id="btnBlue">파란색으로 바꾸기</button>
+</body>
+</html>

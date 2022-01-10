@@ -4,16 +4,19 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript">
-	function pro() {
+	function pro(){
 		let city = document.getElementById("city").value;
-		let w = window.open("addr.html","","width=300, height=300");
-		let addr =w.document.getElementById("addr").value;
-		console.log(addr);
+		w = window.open("addr.html","","width=300,height=200");
+		setTimeout(function(){
+			w.document.getElementById("addr").value = city;			
+		},500);
+		
 	}
 </script>
 </head>
 <body>
 	<input type="text" id="city">
 	<button onclick="pro()">주소입력</button>
+	<div id="result"></div>
 </body>
 </html>

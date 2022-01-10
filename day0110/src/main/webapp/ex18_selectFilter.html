@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		let arr_team = ["일찍끝내조", "B4", "취업을 자바조"]
+		let arr_member = ["김수연, 박지예, 유하림, 이건우, 임하연",
+						 	"최현호, 김지현, 윤서우, 정자영",
+						 	"윤태인,김시아,노유나,박성미,임상진"];
+		
+		// 배열만큼 반복 실행하여 동적으로 option 태그를 생성하여 추가
+		$.each(arr_team, function(index, item){
+				let option = $("<option></option>").html( item );
+				$("#team_list").append(option);
+		});
+		
+		$("#team_list").change(function(){
+			let value = $("#team_list > option:selected").val();
+			$("#member_list").empty();
+			
+			let index = arr_team.indexOf(value);
+			let option = $("<option></option>").html(arr_member[index]);
+			$("#member_list").append(option);
+		});
+	});	
+
+</script>
+</head>
+<body>
+	<select id="team_list">
+	</select>
+	<select id="member_list">
+	</select>
+</body>
+</html>

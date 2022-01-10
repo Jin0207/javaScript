@@ -1,11 +1,19 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript">
+	function pro(){
+		addr = document.getElementById("addr").value ;
+		opener.document.getElementById("result").innerHTML = addr;
+		window.close();
+	}
+</script>
 </head>
 <body>
-	주소: <input type="text" id="addr" name="addr" value="서울"><br>
-	<button>확인</button>
+	주소 : <input type="text" id="addr"><br>
+	<button onclick="pro()">확인</button>
 </body>
 </html>

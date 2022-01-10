@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("btnGet").click( function(){
+			let h1_list = $("h1");
+			$.each(h1_list,  function(index, item) {
+				//item은 h1태그가 하나씩 전달
+				let color = $(item).css("color");
+				alert(color);
+			});
+		});		
+	});	
+</script>
+</head>
+<body>
+	<h1>홍길동</h1>
+	<h1 style="color: red;">유관순</h1>
+	<h1>이순신</h1>
+	<h1>문재인</h1>
+	<h1>김유신</h1>
+	<button id="btnGet">css읽기</button>
+</body>
+</html>

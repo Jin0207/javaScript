@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#btnSet").click(function() {
+			$("input[type=text]").val("tiger");
+		})
+	});
+
+</script>
+</head>
+<body>
+	아이디: <input type="text" ><br>
+	암호: <input type="password" ><br>
+	옵션: <input type="radio" ><br>
+	확인: <input type="checkbox" ><br>
+	파일: <input type="file" ><br>
+	<hr>
+	<button id="btnSet">아이디 값 설정하기</button>
+</body>
+</html>

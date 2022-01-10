@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		let type_list = ["축구공", "유니폼", "축구화", "스타킹"];
+		let fname_list = {
+			"축구공": [{name: "공1", fname:"ball1.jpg"}, {name: "공2", fname:"ball2.jpg"},{name: "공3", fname:"ball3.jpg"},{name: "공4", fname:"ball4.jpg"},{name: "공5", fname:"ball5.jpg"},],
+			"유니폼": [{name: "유니폼1", fname:"cloth1.jpg"}, {name: "유니폼2", fname:"cloth2.jpg"},{name: "유니폼3", fname:"cloth3.jpg"},{name: "유니폼4", fname:"cloth4.jpg"},{name: "유니폼5", fname:"cloth5.jpg"},],
+			"축구화": [{name:"축구화1", fname:"shoe1.jpg"}, {name:"축구화2", fname:"shoe2.jpg"}, {name:"축구화3", fname:"shoe3.jpg"}, {name:"축구화4", fname:"shoe4.jpg"}, {name:"축구화5", fname:"shoe5.jpg"},],
+			"스타킹": [{name:"스타킹1", fname:"stock1.jpg"}, {name:"스타킹2", fname:"stock2.jpg"}, {name:"스타킹3", fname:"stock3.jpg"}, {name:"스타킹4", fname:"stock4.jpg"}, {name:"스타킹5", fname:"stock5.jpg"},]
+		}
+		/*
+		let fname_list = {
+			"축구공": ["공1.jpg", "공2.jpg", "공3.jpg", "공4.jpg", "공5.jpg"],
+			"유니폼": ["유니폼1.jpg", "유니폼2.jpg", "유니폼3.jpg", "유니폼4.jpg", "유니폼5.jpg"],
+			"축구화": ["축구화1.jpg", "축구화2.jpg", "축구화3.jpg", "축구화4.jpg", "축구화5.jpg"],
+			"스타킹": ["스타킹1.jpg", "스타킹2.jpg", "스타킹3.jpg", "스타킹4.jpg", "스타킹5.jpg"]
+		}
+		/*
+		let fname_list = {
+			"축구공": ["ball1.jpg", "ball2.jpg", "ball3.jpg", "ball4.jpg", "ball5.jpg"],
+			"유니폼": ["cloth1.jpg", "cloth2.jpg", "cloth3.jpg", "cloth4.jpg", "cloth5.jpg"],
+			"축구화": ["shoe1.jpg", "shoe2.jpg", "shoe3.jpg", "shoe4.jpg", "shoe5.jpg"],
+			"스타킹": ["stock1.jpg", "stock2.jpg", "stock3.jpg", "stock4.jpg", "stock5.jpg"]
+		}
+		*/
+		
+		$.each(type_list, function(index, item){
+			let option = $("<option></option>").html(item);
+			$("#type").append( option );
+		});
+		
+		$("#type").change(function(){
+			let key = $("#type > option:selected").val();
+			
+			let list = fname_list[key];
+			
+			$("#fname").empty();
+			
+			$.each(list, function(index, item){
+				let option = $("<option></option>").html(item.name);
+				$(option).attr("fname", item.fname);
+				$("#fname").append( option );	
+			});
+		});
+		
+		$("#fname").change(function() {
+			let fname = $("#fname > option:selected").attr("fname");
+			let path = `images/${fname}`;
+			
+			$("#goods").attr("src", path);
+		});
+	});
+</script>
+</head>
+<body>
+	<select id="type"></select>
+	<select id="fname"></select>
+	<hr>
+	<img id="goods">
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#btnName").click(function() {
+			$("h1").css("color","orange");	
+		})
+		
+		$("#btnManager").click(function() {
+			$("#manager").css("color","orange");	
+		})
+		
+		$("#btnName").click(function() {
+			$("*").css("color", "black");	
+		})
+	});	
+
+</script>
+</head>
+<body>
+	<h1>홍길동</h1>
+	<h2>20</h2>
+	
+	<h1 id="manager">이순신</h1>
+	<h2>40</h2>
+	
+	<h1>유관순</h1>
+	<h2>30</h2>
+	
+	<hr>
+	<button id="btnName">이름 선택</button>
+	<button id="btnManager">관리자 선택</button>
+	<button id="btnReset">초기화</button>
+</body>
+</html>

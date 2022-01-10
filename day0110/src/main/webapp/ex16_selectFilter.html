@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		setTimeout( function() {
+			let value = $("select > option:selected").val();
+			alert(value);
+		} , 5000);
+	})	
+
+</script>
+</head>
+<body>
+	<select>
+		<option>사과</option>
+		<option>포도</option>
+		<option>딸기</option>
+		<option>수박</option>
+		<option>망고</option>
+	</select>
+</body>
+</html>

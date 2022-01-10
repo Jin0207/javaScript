@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#btnSet").click( function() {
+			$("h1").css("color","orange");	
+		});
+		
+		$("#btnGet").click( function() {
+			let color = $("h1").css("color");
+			alert(color);
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>홍길동</h1>
+	 <button id="btnSet">css 설정</button>
+	 <button id="btnGet">css 읽기</button>
+</body>
+</html>

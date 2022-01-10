@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	span{
+		display: inline-block;
+		width: 30px;
+		height: 20px;
+		margin: 20px;
+	}
+	
+	body{
+		padding: 100px;
+	}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("span").click(function() {
+			$("div").css( "color", $(this).css("background-color") );
+		});
+		/*
+		let span_list = $("span");
+		
+		$.each(span_list, function(index, item) {
+			$(item).click(function() {
+				let color = $(this).css("background-color");
+				$("div").css("color",color);
+			})
+		})	
+		*/
+	});
+</script>
+</head>
+<body>
+	<div>
+		영국에서 의료진 코로나19 백신 접종 의무화 방안이 통과된 가운데 일부 의료진이 백신을 접종받지 않겠다고 주장해 논란이 됐다.
+		8일(현지시간) 스카이뉴스와 더타임스 등은 사지드 자비드 영국 보건부 장관이 7일 런던의 킹스 칼리지 병원 중환자실을 찾아 의료진 코로나19 백신 접종 의무화에 관한 의견을 물었다가 항의를 들었다고 전했다. 앞서 영국 하원은 지난해 12월, 오는 4월부터 국가의료체계인 국민보건서비스(NHS)에서 환자들을 직접 만나는 직원들이 계속 일을 하려면 코로나19 백신을 맞도록 하는 법안을 통과시킨 바 있다.
+	</div>
+	<hr>
+	<span style="background: red;" id="chgRed"></span>
+	<span style="background: green;" id="chgGreen"></span>
+	<span style="background: blue;" id="chgBlue"></span>
+	<span style="background: pink;" id="chgPink"></span>
+	<span style="background: orange;" id="chgOrange"></span>
+</body>
+</html>

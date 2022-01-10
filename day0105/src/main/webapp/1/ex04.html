@@ -6,6 +6,7 @@
 </head>
 <body>
 	<script type="text/javascript">
+	/*	
 		let a = 53;
 		
 		// 내장객체에 메소드를 추가할 수 없음
@@ -13,14 +14,24 @@
 			return "기본자료형입니다.";
 		}
 		
-		console.log(a.pro);
-		
+		console.log(a.pro());
+	*/	
+		let a = 53;
 		//Number타입(기본자료형)의 프로토타입으로 메소드 추가
 		Number.prototype.pro = function() {
 			return "기본자료형입니다.";
 		}
 		
 		console.log(a.pro());
+/*
+		let a = new Number(53);
+		
+		a.pro = function() {
+			return "기본자료형입니다.";
+		}
+		
+		console.log(a.pro());
+		*/
 	</script>
 </body>
 </html>

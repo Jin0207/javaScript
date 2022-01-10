@@ -21,7 +21,7 @@
 		// 앞의 글자와 뒤의글자가 같으면 0,
 		// 더작으면 음수
 		// 더크면 양수
-		data.sort(function() {
+		data.sort(function(a,b) {
 			if(a.name < b.name){
 				return -1;
 			}else if(a.name > b.name){

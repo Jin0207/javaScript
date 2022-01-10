@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		let type_list = ["축구공", "유니폼", "축구화", "스타킹"];
+		let fname_list = {
+			"축구공": ["ball1.jpg", "ball2.jpg", "ball3.jpg", "ball4.jpg", "ball5.jpg"],
+			"유니폼": ["cloth1.jpg", "cloth2.jpg", "cloth3.jpg", "cloth4.jpg", "cloth5.jpg"],
+			"축구화": ["shoe1.jpg", "shoe2.jpg", "shoe3.jpg", "shoe4.jpg", "shoe5.jpg"],
+			"스타킹": ["stock1.jpg", "stock2.jpg", "stock3.jpg", "stock4.jpg", "stock5.jpg"]
+		}
+		
+		$.each(type_list, function(index, item){
+			let option = $("<option></option>").html(item);
+			$("#type").append( option );
+		});
+		
+		$("#type").change(function(){
+			let key = $("#type > option:selected").val();
+			
+			let list = fname_list[key];
+			
+			$("#fname").empty();
+			
+			$.each(list, function(index, item){
+				$("#fname").append( $("<option></option>").html(item) );	
+			});
+		});
+		
+		$("#fname").change(function() {
+			let fname = $("#fname > option:selected").val();
+			let path = `images/${fname}`;
+			
+			$("#goods").attr("src", path);
+		});
+	});
+</script>
+</head>
+<body>
+	<select id="type"></select>
+	<select id="fname"></select>
+	<hr>
+	<img id="goods">
+</body>
+</html>
