@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//$(".student").css("background","orange");
+		$("h1").each(function() {
+			if( $(this).is(".student") ){ //내게 스튜던트가 있나요? true/false
+				$(this).css("background", "pink");
+			}
+		});
+	})	
+
+</script>
+</head>
+<body>
+	<h1>홍길동</h1>
+	<h1 class="student">이순신</h1>
+	<h1>고길동</h1>
+	<h1>유관순</h1>
+	<h1 class="student">김유신</h1>
+</body>
+</html>

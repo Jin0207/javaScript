@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		/*
+		$("h3:even").css({
+			color: "blue",
+			background: "yellow"
+		});
+		$("h3").filter(":even").css({
+			color: "white",
+			background: "black"
+		});
+		*/
+		
+		//조건에 맞는 데이터만 추출하기 위한 콜백함수
+		// h3 태그들 중에서 filter 함수의 매개변수인 콜백함수의 조건을 만족하는 노드만 선택
+		$("h3").filter(function(index){ 
+			return index % 3 == 0;
+		}).css({
+			color: "white",
+			background: "pink"
+		});
+	})
+</script>
+</head>
+<body>
+	<h3>사과</h3>
+	<h3>포도</h3>
+	<h3>키위</h3>
+	<h3>수박</h3>
+	<h3>딸기</h3>
+	<h3>바나나</h3>
+	<h3>오렌지</h3>
+</body>
+</html>

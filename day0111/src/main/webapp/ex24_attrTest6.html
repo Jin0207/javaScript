@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		let data = ["ball1.jpg", "cloth1.jpg", "shoe1.jpg"];
+		
+		$("img").attr({
+			src: function(index) {
+				return data[index];
+			},
+			width: function(i) {
+				return 100 * (i+1);
+			},
+			height: 100
+		});
+	});
+</script>
+</head>
+<body>
+	<img><br>
+	<img><br>
+	<img><br>
+</body>
+</html>

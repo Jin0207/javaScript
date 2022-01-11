@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//선택자가 배열일 때, 모두 변경됨
+		$("img").attr("width",200);
+		
+		//선택자가 배열일 때, 속성의 값을 읽어오면 맨 첫번째요소의 속성값만을 읽어옴
+		let height = $("img").attr("height");
+		alert(height);
+	});
+</script>
+</head>
+<body>
+	<img src="ball1.jpg" width="100" height="100"><br>
+	<img src="cloth1.jpg" width="50" height="50"><br>
+	<img src="shoe1.jpg" width="200" height="200"><br>
+</body>
+</html>

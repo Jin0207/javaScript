@@ -6,13 +6,13 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 	$(function(){
-		$("btnSet").click( function(){
-			$("h1").css("color","black");
+		$("#btnSet").click( function(){
+			$("h1").css("color","blue");
 			//선택자로 선택한 결과가 배열일 때,
 			//설정은 모두 설정이 됨
 		});		
 		
-		$("btnGet").click( function(){
+		$("#btnGet").click( function(){
 			let color = $("h1").css("color");
 			alert(color);
 			//선택자로 선택한 결과가 배열일 때

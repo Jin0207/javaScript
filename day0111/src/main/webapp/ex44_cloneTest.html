@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	img{
+		width: 100px;
+		height: 100px;
+	}
+	.item{
+		display: inline-block;
+		width: 150px;
+		height: 200px;
+		border: 2px solid black;
+		margin: 5px;
+		padding: 5px;
+		text-align: center;
+		border-radius: 10px;
+	}
+	.item:hover{
+		background: pink;
+	}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		let data = [
+			{name: "축구공", price:5000, fname: "ball1.jpg"},
+			{name: "유니폼", price:25000, fname: "cloth1.jpg"},
+			{name: "축구화", price:85000, fname: "shoe1.jpg"},
+			{name: "스타킹", price:3000, fname: "stock1.jpg"}
+		];
+		
+		$(data).each(function(i, item) {
+			let div = $("<div></div>").addClass("item");
+			let img = $("<img/>").attr({
+				src: item.fname,
+				width: 100,
+				height: 100
+			});
+			let h1 = $("<h3></h3>").html(item.name);
+			let h3 = $("<p></p>").html(item.price + "원");
+			$(div).append(img, h1,h3);
+			$("#list").append($(div));
+		});
+		
+		$(document).on("dblclick", ".item", function() {
+			$("#cart").append($(this).clone());
+		})
+	});
+</script>
+</head>
+<body>
+	<div id="list"></div>
+	<div id="cart"></div>
+</body>
+</html>

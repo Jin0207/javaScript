@@ -1,8 +1,0 @@
-자바스크립트
-	head 안에 
-	<script></script>
-	
-	alert 함수 -- 웹브라우저에 출력 하는 함수
-		-->Node.js는 서버를 위한 기술이므로 alert함수 실행 x
-	alert('경고 창에 출력할 메세지')
-	

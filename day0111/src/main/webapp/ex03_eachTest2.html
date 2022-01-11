@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$.each( $("h1"), function(index, item) {
+			let str = $(item).html();
+			alert(str);
+		});
+	})	
+
+</script>
+</head>
+<body>
+	<h1>홍길동</h1>
+	<h1>유관순</h1>
+	<h1>이순신</h1>
+</body>
+</html>

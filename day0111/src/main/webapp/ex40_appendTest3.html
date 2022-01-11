@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		let data = [{name:"홍길동", age:20},{name:"안동근", age:30},{name:"유관순", age:40}];
+		$("div").each(function(index,item) {
+			let h1 = $("<h1></h1>").html(data[index].name);
+			let h2 = $("<h2></h2>").html(data[index].age);
+			
+			$(this).append(h1,h2);
+		});
+	})
+
+</script>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

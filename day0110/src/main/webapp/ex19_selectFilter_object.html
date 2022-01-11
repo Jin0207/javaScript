@@ -6,12 +6,12 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 	$(function() {
-		let arr_team = ["일찍끝내조", "B4", "취업을자바조"];
+		let arr_team = ["과일", "동물", "채소"];
 		
 		let arr_member = {
-				"일찍끝내조": ["김수연", "박지예", "유하림", "임하연"],
-				"B4": ["최현호", "김지현", "윤서우", "정자영"],
-				"취업을자바조": ["윤태인","김시아", "노유나","박성미", "임상진"]
+				"과일": ["사과", "바나나", "키위", "수박"],
+				"동물": ["강아지", "고양이", "기린", "코끼리"],
+				"채소": ["파","깻잎", "당근","양파", "감자"]
 		}
 		
 		// 배열만큼 반복 실행하여 동적으로 option 태그를 생성하여 추가
@@ -56,6 +56,6 @@
 	</select>
 	<button id="btnOK">확인</button>
 	
-	선택한 사람: <span id="result"></span>
+	선택한 것: <span id="result"></span>
 </body>
 </html>

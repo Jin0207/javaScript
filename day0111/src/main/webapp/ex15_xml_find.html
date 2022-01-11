@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	let xml = "";
+	xml += "<members>";
+	xml += 		"<member>";
+	xml += 			"<name>홍길동</name>";
+	xml += 			"<age>20</age>";
+	xml += 		"</member>";
+	xml += 		"<member>";
+	xml += 			"<name>이순신</name>";
+	xml += 			"<age>35</age>";
+	xml += 		"</member>";
+	xml += 		"<member>";
+	xml += 			"<name>유관순</name>";
+	xml += 			"<age>27</age>";
+	xml += 		"</member>";
+	xml +=  "</members>";
+	$(function() {
+		// xml 형태를 띄는 문자열을 xml객체로 만들기 위하여 parseXML함수를 이용
+		let xmlDoc = $.parseXML(xml);
+		//xml 객체로부터 특정 태그(노드)를 찾기위하여 find함수를 이용
+		$(xmlDoc).find("member").each(function(){
+			let output = "";
+			output += "<div>";
+			output += "<h1>"+ $(this).find("name").text() +"</h1>";
+			output += "<p>"+ $(this).find("age").text() +"</p>"
+			output += "</div>";
+			
+			document.body.innerHTML += output;
+		});
+	});
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

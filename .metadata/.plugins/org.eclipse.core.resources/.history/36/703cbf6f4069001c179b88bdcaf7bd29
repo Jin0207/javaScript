@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="day1230">
-        <property name="context-root" value="day1230"/>
-        <property name="java-output-path" value="/day1230/build/classes"/>
-    </wb-module>
-</project-modules>

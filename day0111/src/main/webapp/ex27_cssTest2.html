@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		let color = ["red", "green", "blue"];
+		
+		$("h1").css({
+			color: function(i){
+				return color[i];
+			},
+			background: "black"
+		});
+	});	
+</script>
+</head>
+<body>
+	<h1>홍길동</h1>
+	<h1>유관순</h1>
+	<h1>이순신</h1>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	img{
+		width: 100px;
+		height: 100px;
+	}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		/*
+		setTimeout( function() {
+			$("img").first().appendTo("body");
+		}, 3000);
+		*/
+		setInterval( function() {
+			$("img").first().appendTo("body");
+		}, 1000);
+	});
+</script>
+</head>
+<body>
+	<img src="ball1.jpg">
+	<img src="ball2.jpg">
+	<img src="ball3.jpg">
+	<img src="ball4.jpg">
+	<img src="ball5.jpg">
+</body>
+</html>

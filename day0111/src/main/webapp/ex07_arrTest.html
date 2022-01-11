@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.high_light_0{
+		background: yellow;
+	}
+	.high_light_1{
+		background: pink;
+	}
+	.high_light_2{
+		background: green;
+	}
+	.high_light_3{
+		background: gray;
+	}
+	.high_light_4{
+		background: orange;
+	}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		/*
+		$("h1").each(function(index, item) {
+			$(item).addClass("high_light_"+index);
+		});
+		*/
+		/*
+		$("h1").each(function(index, item) {
+			$(this).addClass("high_light_"+index);
+		});
+		*/
+		$("h1").addClass(function(index) {
+			return "high_light_" + index;
+		});
+		//addClass 함수에는 값을 설정해야하니, addClass의 콜백함수에는 반드시 return값이 있어야한다.
+	})
+</script>
+</head>
+<body>
+	<h1>홍길동</h1>
+	<h1>유관순</h1>
+	<h1>이순신</h1>
+	<h1>김유신</h1>
+	<h1>강감찬</h1>
+</body>
+</html>
