@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	div{
+		margin: 5px;
+		padding: 3px;
+		border: 3px solid black;
+		border-radius: 10px;
+	}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("div").click(function(){
+			/*
+			//눌러진 div태그안의 h1을 찾는다
+			let name = $("h1", this).text();
+			let addr = $("p", this).text();
+			*/
+			let name = $(this).find("h1").text();
+			let addr = $(this).find("p").text();
+			
+			alert(name + '\n' + addr);
+		});
+	});
+</script>
+</head>
+<body>
+	<div>
+		<h1>홍길동</h1>
+		<p>서울</p>
+	</div>
+	<div>
+		<h1>이순신</h1>
+		<p>인천</p>
+	</div>
+	<div>
+		<h1>유관순</h1>
+		<p>제주</p>
+	</div>
+</body>
+</html>

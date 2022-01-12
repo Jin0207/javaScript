@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#all_check").change(function() {
+			if(this.checked){
+				$("#check_item").find("input[type=checkbox]").attr("checked",true);
+			}else{
+				$("#check_item").find("input[type=checkbox]").attr("checked",false);
+			}
+		});
+	});
+
+</script>
+</head>
+<body>
+	<input type="checkbox" id="all_check">
+	<label>ALL</label>
+	
+	<div id="check_item">
+		<input type="checkbox">
+		<label>A Option</label>
+		<input type="checkbox">
+		<label>B Option</label>
+		<input type="checkbox">
+		<label>C Option</label>
+	</div>
+</body>
+</html>

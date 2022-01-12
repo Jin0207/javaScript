@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	p,a{
+		margin: 10px;
+		padding: 5px;
+		border: 3px solid black;
+	}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("a").click(function(event){
+			$(this).css("background", "blue");
+			//event.preventDefault();
+			//event.stopPropagation();
+			return false;
+		});
+		
+		$("p").click(function(){
+			$(this).css("background","red");
+		});
+	});
+</script>
+</head>
+<body>
+	<p>
+		hello<br>
+		<a href="http://www.hanb.co.kr">한빛미디어</a>
+	</p>
+</body>
+</html>

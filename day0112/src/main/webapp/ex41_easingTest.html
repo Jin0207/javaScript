@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="jquery-ui-1.13.0.custom/jquery-ui.min.css">
+<style type="text/css">
+	div{
+		background: orange;
+		width: 150px;
+		height: 150px;
+		position: relative;
+	}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.13.0.custom/jquery-ui.min.js"></script>
+<script type="text/javascript">
+	//https://easings.net/ko
+	//easing함수 종류 확인
+	$(function() {
+		
+		$("button").click(function() {
+			let easing = $("select > option:selected").val();
+			$("div").animate({left: '400'}, 2000, easing).animate({left: '0'},1000,easing)			
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<select>
+		<option>easeInBounce</option>
+		<option>easeInElastic</option>
+		<option>easeInOutElastic</option>
+		<option>easeInOutBounce</option>
+	</select>
+	
+	<button>MOVE</button>
+	<div></div>
+</body>
+</html>

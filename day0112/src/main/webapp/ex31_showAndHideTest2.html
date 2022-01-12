@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("h1").click(function(){
+			/*
+			$(this).next().slideToggle(2000, function(){
+				alert("작업끝");
+			});
+			*/
+			$(this).next().fadeToggle(2000, function(){
+				alert("작업끝");
+			});
+		});
+	});	
+</script>
+</head>
+<body>
+	<h1>OPEN & CLOSE</h1>
+	<div>
+		<h1>'먹는 치료제'‥65세 이상·면역 저하자부터</h1>
+		<p>화이자사의 먹는 치료제 '팍스로비드'가 내일 국내에 도입됩니다.</p>
+	</div>
+	<div>
+		<h1>'광주 붕괴 사고' 6명 수색 재개‥합수본 설치</h1>
+		<p>광주시 화정동 고층아파트 외벽 붕괴사고 현장에 대한 안전 점검과 함께 연락이 두절된 근로자에 대한 수색작업이 본격화되고 있습니다.</p>
+	</div>
+</body>
+</html>

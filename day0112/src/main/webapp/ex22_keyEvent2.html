@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("textarea").keyup(function() {
+			let inputLength = $(this).val().length;
+			let remain = 150 - inputLength;
+			$("h1").html(remain);
+			
+			//150까지만 써지도록 코드 수정
+			if(remain <= 0){
+				let data = $(this).val();
+				$(this).val( data.substr(0,150) );
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<div>
+		<p>현재 내 생각</p>
+		<h1>150</h1>
+		<textarea rows="5" cols="70"></textarea>
+	</div>
+</body>
+</html>

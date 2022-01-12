@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.item{
+		width: 300px;
+		height: 150px;
+		padding: 10px;
+		margin: 10px auto;
+		border: 2px solid pink;
+		border-radius: 10px;
+	}
+	
+	.detail{
+		display: inline-block;
+		text-align: center;
+	}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		let data = [
+			{name:"축구공1", price:1000, qty:10, fname:"images/ball1.jpg"},
+			{name:"축구공2", price:2000, qty:20, fname:"images/ball2.jpg"},
+			{name:"축구공3", price:2400, qty:10, fname:"images/ball3.jpg"},
+			{name:"축구공4", price:3500, qty:40, fname:"images/ball4.jpg"},
+			{name:"축구공5", price:3000, qty:10, fname:"images/ball5.jpg"},
+			{name:"유니폼1", price:10000, qty:10, fname:"images/cloth1.jpg"},
+			{name:"유니폼2", price:14000, qty:10, fname:"images/cloth2.jpg"},
+			{name:"유니폼3", price:15000, qty:15, fname:"images/cloth3.jpg"},
+			{name:"유니폼4", price:19000, qty:40, fname:"images/cloth4.jpg"},
+			{name:"유니폼5", price:17000, qty:30, fname:"images/cloth5.jpg"},
+			{name:"축구화1", price:10000, qty:10, fname:"images/shoe1.jpg"},
+			{name:"축구화2", price:20000, qty:30, fname:"images/shoe2.jpg"},
+			{name:"축구화3", price:30000, qty:20, fname:"images/shoe3.jpg"},
+			{name:"축구화4", price:40000, qty:18, fname:"images/shoe4.jpg"},
+			{name:"축구화5", price:12000, qty:10, fname:"images/shoe5.jpg"},
+			{name:"스타킹1", price:2000, qty:20, fname:"images/stock1.jpg"},
+			{name:"스타킹2", price:2400, qty:30, fname:"images/stock2.jpg"},
+			{name:"스타킹3", price:2500, qty:40, fname:"images/stock3.jpg"},
+			{name:"스타킹4", price:2900, qty:12, fname:"images/stock4.jpg"},
+			{name:"스타킹5", price:3000, qty:8, fname:"images/stock5.jpg"}
+		];
+		
+		$(data).each(function(i, item) {
+			let goods = $("<div></div>").addClass("item");
+			let img = $("<img/>").attr({
+				src: item.fname,
+				width: 100,
+				height: 100
+			});
+			let detail = $("<span></span>").addClass("detail");
+			$(detail).append("<p> 상품명: " + item.name + "</p>");
+			$(detail).append("<p> 가격: " + item.price + "원</p>");
+			$(detail).append("<p> 수량: " + item.qty + "개</p>");
+			
+			
+			$(goods).append(img,detail);
+			$("#goods_list").append( goods );
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="goods_list"></div>
+</body>
+</html>
