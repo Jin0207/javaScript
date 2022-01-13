@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("button").click(function() {
+			let member = {
+					name: $("#name").val(),
+					age: $("#age").val()
+			};
+			
+			$.ajax({
+				url: "helloData.jsp",
+				data: member,
+				success: function(result){
+						$("h2").html(result);
+				}
+			});//end ajax
+		});
+	});
+</script>
+</head>
+<body>
+	<form action="helloData.jsp">
+		<label for="name">이름:</label>
+		<input type="text" id="name">
+		<label for="age">나이:</label>
+		<input type="number" id="age">
+	</form>
+	<button>Ajax 통신하기</button>
+	<hr>
+	<p>서버로부터 수신된 데이터</p>
+	<h2></h2>
+</body>
+</html>

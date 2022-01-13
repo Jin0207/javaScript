@@ -8,7 +8,10 @@
 	$(function(){
 		$(window).scroll(function(){
 			let scrollHeight = $(window).scrollTop() + $(window).height();
+			console.log("scrollTop:"+$(window).scrollTop())
+			console.log("(window).height:"+$(window).height())
 			let documentHeight = $(document).height();
+			console.log("(document).height:" + documentHeight)
 			
 			if(scrollHeight + 200 >= documentHeight){
 				for(i=0; i<10; i++){

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("button").click(function() {
+			$.ajax({
+				//서버에 요청할 이름
+				url: "Hello.do",
+				
+				//데이터라는 변수가 데이터를 받아온다
+				sucess: function(data) {
+					$("h2").html(data);
+				}
+			});//end ajax
+		});
+	});
+</script>
+</head>
+<body>
+	<button>Ajax 통신하기</button>
+	<hr>
+	<p>서버로부터 수신된 데이터</p>
+	<h2></h2>
+</body>
+</html>

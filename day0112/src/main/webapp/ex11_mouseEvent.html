@@ -19,12 +19,13 @@
 			let position = $(this).offset();
 			let x = event.pageX - position.left;
 			let y = event.pageY - position.top;
-		
+			
 			context.beginPath();
 			context.moveTo(x,y);
 		},function(event){
 			let position = $(this).offset();
 			let x = event.pageX - position.left;
+			
 			let y = event.pageY - position.top;
 			context.lineTo(x,y);
 			context.stroke();
