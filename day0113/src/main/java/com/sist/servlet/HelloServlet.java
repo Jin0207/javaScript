@@ -28,7 +28,6 @@ public class HelloServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//Ajax통신으로 요청되는 서버가 응답하는 데이터의 형식 - csv, xml, json
 		
 		response.setContentType("text/plaine");
 		PrintWriter out = response.getWriter();

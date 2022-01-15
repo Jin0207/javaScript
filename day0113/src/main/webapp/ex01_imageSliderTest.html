@@ -39,7 +39,6 @@
 		height: 150px;
 	}
 	
-	/*Control Panel*/
 	.control_panel{
 		position: absolute;
 		top: 380px;
@@ -74,7 +73,6 @@
 	$(function(){
 		//슬라이더를 움직여주는 함수
 		function moveSlider(index){
-			//console.log(index + "번째 이미지와 텍스트를 출력")
 			let willMoveLeft = -(index * 600);
 			$(".slider_panel").animate({left: willMoveLeft}, 2000);
 			

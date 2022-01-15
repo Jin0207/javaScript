@@ -1,0 +1,18 @@
+xstream
+	자바객체를 xml문자열로 변환해주는 라이브러리
+	https://x-stream.github.io/download.html
+	Binary distribution: C
+	
+	압출풀기
+	
+	lib폴더
+	jar파일
+	xstream - jar파일
+	
+	프로젝트의 lib폴더에
+	
+	gson
+		https://mvnrepository.com/artifact/com.google.code.gson/gson
+		자바객체를 json 문자열로 만들어주는 라이브러리
+		
+	

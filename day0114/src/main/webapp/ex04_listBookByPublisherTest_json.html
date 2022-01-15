@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		
+		$("button").click(function() {
+			
+			$("tbody").empty();			
+			let data = { publisher: $("#publisher").val()};
+			
+			$.ajax({
+				//url:"listBookByPublisher_json.jsp",
+				url:"listBookByPublisher_json_gson.jsp",
+				data: data,
+				success: function(data){
+					
+					$(data).each(function(index, item) {
+						let bookname = this.bookName;
+						let price = item.price;
+						
+						let tr = $("<tr></tr>");
+						tr.append( $("<td></td>").html(bookname) );
+						tr.append( $("<td></td>").html(price) );
+						$("tbody").append(tr);
+					})
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	출판사: <input type="text" id="publisher"><br>
+	<button>도서 조회</button>
+	<hr>
+	<table border="1" id="books">
+		<thead>
+			<tr>
+				<td>도서명</td>
+				<td>가격</td>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+</body>
+</html>

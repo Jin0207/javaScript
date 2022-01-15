@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//500-내부-서버-오류
+		//java.lang.NumberFormatException: null
+		$("button").click(function() {
+			
+			let data = {
+					no: $("#no").val()
+			};
+			
+			$.ajax({
+				url: "getBook.jsp",
+				data: data,
+				success: function(data){
+					console.log("실행")
+					let arr = data.split(",");
+					
+					$("span").each(function(index, item){
+						$(this).text( arr[index] );
+					});
+				}
+			});
+		});
+		
+	});
+
+</script>
+</head>
+<body>
+	도서번호: <input type="text" id="no"><br>
+	도서명: <span></span><br>
+	출판사: <span></span><br>
+	가격: <span></span><br>
+	<button>도서정보 읽어오기</button>
+</body>
+</html>

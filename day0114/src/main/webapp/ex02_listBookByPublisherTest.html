@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		
+		$("button").click(function(){
+			
+			let publisher = $("#publisher").val();
+			let data = {
+					publisher: publisher
+			};
+			
+			$.ajax({
+				url: "listBookByPublisher.jsp",
+				data: data,
+				success: function(data) {
+					let arr = $(data).find("book");
+					/*
+					$.each(arr, function() {
+						let bookName = $(this).find("bookName").text();
+						let price = $(this).find("price").text();
+						
+						
+						let output = "";
+						output += "<tr>"
+						output += 	"<td>" + bookName + "</td>"; 
+						output += 	"<td>" + price + "원</td>"; 
+						output += "</tr>"
+						document.getElementById("books").innerHTML += output;
+					})
+					*/
+
+					$("tbody").empty();
+					$.each(arr, function() {
+						
+						let bookName = $(this).find("bookName").text();
+						let price = $(this).find("price").text();
+						
+						let tr = $("<tr></tr>");
+						$(tr).append( $("<td></td>").html(bookName) , $("<td></td>").html(price) );
+						
+						$("tbody").append(tr);
+					});
+				}
+			});
+		})
+	});
+</script>
+</head>
+<body>
+	출판사: <input type="text" id="publisher"><br>
+	<button>도서 조회</button>
+	<hr>
+	<table border="1" id="books">
+		<thead>
+			<tr>
+				<td>도서명</td>
+				<td>가격</td>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+</body>
+</html>

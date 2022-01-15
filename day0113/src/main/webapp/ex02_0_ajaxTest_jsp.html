@@ -10,9 +10,8 @@
 			$.ajax({
 				//서버에 요청할 이름
 				url: "hello.jsp",
-				
 				//데이터라는 변수가 데이터를 받아온다
-				sucess: function(data) {
+				success: function(data) {
 					$("h2").html(data);
 				}
 			});//end ajax
