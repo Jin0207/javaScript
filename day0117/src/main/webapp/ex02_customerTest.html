@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {	
+		function loadCustomer() {
+			$("tbody").empty();
+			
+			$.ajax({
+				url: "ex01_listCustomer_json.jsp",
+				success: function(data) {
+					
+					$(data).each(function() {
+						let custid = $("<td></td>").html(this.custid);
+						let name = $("<td></td>").html(this.name);
+						let address = $("<td></td>").html(this.address);
+						let phone = $("<td></td>").html(this.phone);
+						let tr = $("<tr></tr>").append(custid, name, address, phone);
+						
+						$("tbody").append(tr);
+					});
+				}
+			});		
+		}
+		
+		$("#btnAdd").click(function() {
+			let custid = $("#custid").val();
+			let name = $("#name").val();
+			let address = $("#address").val();
+			let phone = $("#phone").val();
+
+			let data = {
+					custid: custid,
+					name: name,
+					address: address,
+					phone: phone
+			}
+			
+			$.ajax({
+				url: "ex02_insertCustomer.jsp",
+				data: data,
+				success: function() {
+					loadCustomer();
+				}
+			});		
+		});
+
+		$("#btnRead").click(function() {
+			loadCustomer();
+		});
+		
+		loadCustomer();
+		
+		//미래에 만들어진 tr의 이벤트 설정
+		$(document).on("click", "tbody tr", function() {
+			let td_list = $(this).find("td");
+			
+			$("#custid").val( $(td_list[0]).text() );
+			$("#name").val( $(td_list[1]).text() );
+			$("#address").val( $(td_list[2]).text() );
+			$("#phone").val( $(td_list[3]).text() );
+		});
+		
+		//정보수정
+		$("#btnUpdate").click(function() {
+			let data = {
+					custid: $("#custid").val(),
+					naeme: $("#name").val(),
+					address: $("#address").val(),
+					phone:$("#phone").val()
+			};
+			
+			$.ajax(
+				{		
+				url: "ex02_updateCustomer.jsp",
+				data: data,
+				success: function(){
+					loadCustomer();
+				}
+					
+			});
+			
+		});
+		
+		//삭제
+		$("#btnDelete").click(function() {
+			
+			$.ajax(
+				{
+					url: "ex02_deleteCustomer.jsp",
+					data: { custid:$("#custid").val() },
+					success: function() {
+						loadCustomer();
+					}
+				}
+			);
+		});
+		
+	});
+</script>
+</head>
+<body>
+	고객번호: <input type="text" id="custid"><br>	
+	고객이름: <input type="text" id="name"><br>	
+	고객주소: <input type="text" id="address"><br>	
+	고객전화: <input type="text" id="phone"><br>	
+	<hr>
+	<button id="btnRead">고객정보조회</button>
+	<button id="btnAdd">고객등록</button>
+	<button id="btnUpdate">고객정보수정</button>
+	<button id="btnDelete">고객정보삭제</button>
+	<hr>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>고객번호</th>
+				<th>이름</th>
+				<th>주소</th>
+				<th>전화번호</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+
+</body>
+</html>

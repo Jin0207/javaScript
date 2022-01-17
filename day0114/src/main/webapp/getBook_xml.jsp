@@ -4,8 +4,8 @@
 <%@ page language="java" contentType="application/xml; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	int no = Integer.parseInt( request.getParameter("no") );
-	//int no = 1;
+	//int no = Integer.parseInt( request.getParameter("no") );
+int no = 1;
 	BookDAO dao = new BookDAO();
 	BookVO vo = dao.listBookInfo(no);
 	

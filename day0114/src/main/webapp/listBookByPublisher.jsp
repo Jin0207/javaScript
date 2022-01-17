@@ -6,6 +6,7 @@
     pageEncoding="UTF-8"%>
 <%
 	String publisher = request.getParameter("publisher");
+	//String publisher = "쌍용미디어";
 	BookDAO dao = new BookDAO();
 	ArrayList<BookVO> list = dao.listBookName(publisher);
 	XStream stream = new XStream();

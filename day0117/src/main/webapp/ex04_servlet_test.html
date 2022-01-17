@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		
+		$("#btnGet").click(function() {
+			
+			$("tbody").empty();
+			
+			$.ajax({
+				url:"Customer",
+				type: "get",
+				success: function(arr) {
+					$(arr).each(function() {
+						let custid = $("<td></td>").html( this.custid );
+						let name = $("<td></td>").html( this.name );
+						let address = $("<td></td>").html( this.address );
+						let phone = $("<td></td>").html( this.phone );
+						
+						let tr = $("<tr></tr>").append(custid, name, address, phone);
+						$("tbody").append(tr);	
+					});
+
+				}
+			});
+		});
+		
+		$("#btnPost").click(function() {
+			
+			let data = {
+					custid: $("#custid").val(),
+					name: $("#name").val(),
+					address: $("#address").val(),
+					phone: $("#phone").val()
+			}
+			
+			$.ajax({
+				url:"Customer",
+				data: data,
+				type: "post",
+				success: function(arr) {
+					
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	고객번호: <input type="text" id="custid"><br>
+	고객명: <input type="text" id="name"><br>
+	주소: <input type="text" id="address"><br>
+	전화번호: <input type="text" id="phone"><br>
+	<hr>
+	<button id="btnGet">get방식 요청</button>
+	<button id="btnPost">post방식 요청</button>
+	<hr>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>고객번호</th>
+				<th>고객명</th>
+				<th>주소</th>
+				<th>전화번호</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+</body>
+</html>

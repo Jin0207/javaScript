@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		
+		$("#btnAdd").click(function() {
+			//form태그안에 있어야하며 name이 있어야한다.
+			let data = $("#f").serializeArray();
+			console.log(data);
+			$.post("Customer",data,function(){
+				
+			});
+			
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<form id="f">
+		고객번호: <input type="text" name="custid"><br>
+		고객명: <input type="text" name="name"><br>
+		주소: <input type="text" name="address"><br>
+		전화번호: <input type="text" name="phone"><br>
+	</form>
+	<hr>
+	<button id="btnAdd">등록</button>
+	<button id="btnRead">목록</button>
+	<hr>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>고객번호</th>
+				<th>고객명</th>
+				<th>주소</th>
+				<th>전화번호</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+</body>
+</html>
